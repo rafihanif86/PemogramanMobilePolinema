@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorBgWhite">
+    android:background="@color/colorBgWhite"
+    tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_height="match_parent">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,7 +24,7 @@
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/logo"
+                android:background="@drawable/logo_2"
                 app:layout_constraintBottom_toTopOf="@+id/email"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -39,12 +36,15 @@
                 android:layout_height="63dp"
                 android:layout_marginStart="35dp"
                 android:layout_marginLeft="35dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginEnd="35dp"
                 android:layout_marginRight="35dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_edittext"
                 android:ems="10"
                 android:hint="E-mail address"
                 android:inputType="textPersonName"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintBottom_toTopOf="@+id/password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -58,32 +58,71 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="35dp"
                 android:layout_marginRight="35dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_edittext"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintBottom_toTopOf="@+id/login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
 
             <Button
                 android:id="@+id/login"
-                android:layout_width="196dp"
-                android:layout_height="49dp"
+                android:layout_width="317dp"
+                android:layout_height="59dp"
                 android:layout_marginStart="96dp"
                 android:layout_marginLeft="96dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="92dp"
-                android:layout_marginRight="92dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginRight="96dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_bt"
                 android:text="Login me"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/colorBgWhite"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/password" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="15dp"
+                android:text="Don't have Account?"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="102dp"
+                android:layout_marginRight="102dp"
+                android:layout_marginBottom="15dp"
+                android:text="Create it!"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/login" />
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
 
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
 
